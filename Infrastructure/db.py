@@ -20,3 +20,8 @@ async def get_city(user_id: int):
         row = await cursor.fetchone()
         city = row[0]
         return city
+    
+async def change_city(user_id: int, city: str):
+    async with aiosqlite.connect(config.DB) as db:
+        await db.execute("UPDATE Users SET city = ? WHERE id = ?", (city, user_id))
+        await db.commit()

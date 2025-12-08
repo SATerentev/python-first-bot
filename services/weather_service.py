@@ -9,4 +9,4 @@ async def get_weather_for_city(city: str, day_offset=1):
     elif day_offset == 2:
         return f"Завтра в {city}:\nМаксимальная температура: {max_temperature[1]}\nМинимальная температура: {min_temperature[1]}"
     else:
-       return "что-то наебнулось"
+       return "что-то наебнулось" 
