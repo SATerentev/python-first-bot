@@ -6,8 +6,6 @@ async def try_add_new_user(id: int):
 
     if success:
         print(f"ЗАРЕГИСТРИРОВАН НОВЫЙ ЮЗЕР\nUSER_ID = {id}")
-    else:
-        print("НЕТ НОВЫХ ЮЗЕРОВ")
 
 async def get_city(id: int):
     return await db.get_city(id)
